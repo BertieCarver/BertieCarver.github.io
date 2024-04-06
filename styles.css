@@ -226,3 +226,28 @@ imagewithshadow{
     border-radius: 51%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
+
+@media screen and (max-width: 960px) {
+    .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .user, .links{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+
+}
