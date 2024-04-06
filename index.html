@@ -14,7 +14,9 @@
         <section class = "glass">
             <div class="dashboard">
                 <div class="user">
-                    <img src="./Images/avatar.png" alt="">
+                    <div class="img__container">
+                        <img src="./Images/fantasticmfox.png" alt="" class="imagewithshadow shadow1">
+                    </div>
                     <h3>Bertie Carver-Prue</h3>
                     <p>16, Brighton</p>
                 </div>
@@ -51,26 +53,34 @@
                         <img src="./Images/imdb.png" alt="">
                         <div class="card-info">
                             <h2>IMDB Top 250</h2>
-                            <div class="progress"></div>
+                            <div class="imdb__progress"></div>
                         </div>
-                        <h2 class="percentage">26%</h2>
+                        <h2 id="dynamicimdb" class="percentage"></h2>
                     </div>
                     <div class="card">
                         <img src="./Images/rolling stone.png" alt="">
                         <div class="card-info">
                             <h2>Rolling Stone Top 100</h2>
-                            <div class="progress"></div>
+                            <div class="rollingstone__progress"></div>
                         </div>
-                        <h2 class="percentage">26%</h2>
+                        <h2 id="dynamicroll" class="percentage"></h2>
                     </div>
                     <div class="card">
                         <img src="./Images/modern library.png" alt="">
                         <div class="card-info">
                             <h2>Modern Library Top 100 </h2>
-                            <div class="progress"></div>
+                            <div class="modernlibrary__progress"></div>
                         </div>
-                        <h2 class="percentage">26%</h2>
+                        <h2 id="dynamicmodl" class="percentage"></h2>
                     </div>
+                    <script>
+                        const imdbValue = getComputedStyle(document.documentElement).getPropertyValue('--imdb');
+                        document.getElementById('dynamicimdb').textContent = imdbValue;
+                        const rollValue = getComputedStyle(document.documentElement).getPropertyValue('--roll');
+                        document.getElementById('dynamicroll').textContent = rollValue;
+                        const modlValue = getComputedStyle(document.documentElement).getPropertyValue('--modl');
+                        document.getElementById('dynamicmodl').textContent = modlValue;
+                    </script>
                 </div>
             </div>
         </section>
